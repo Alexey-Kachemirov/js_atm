@@ -7,3 +7,4 @@ commit from master 1
 
 commit from develop
 
+rebase develop from master (commit in master)
