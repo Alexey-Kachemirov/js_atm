@@ -2,4 +2,8 @@ commit me
 change on server
 view change in gitgui
 edited in develop branch (2nd commit)
+
 commit from master 1
+
+commit from develop
+
