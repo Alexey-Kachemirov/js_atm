@@ -1,0 +1,2 @@
+3rd file (2nd commit in develop branch)
+edit 2nd commit in develop branch to rebase
