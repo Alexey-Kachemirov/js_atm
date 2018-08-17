@@ -1,0 +1,12 @@
+commit me
+change on server
+view change in gitgui
+edited in develop branch (2nd commit)
+commit from develop
+commit from master 2.1
+1st commit master branch for task 2.1
+
+edit in master
+
+edit in develop
+
