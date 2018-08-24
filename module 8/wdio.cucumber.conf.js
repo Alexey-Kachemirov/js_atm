@@ -44,17 +44,16 @@ exports.config = {
   screenshotPath: './test/reports/errorShots/',   // Saves a screenshot to a given path if a command fails.
 
   baseUrl: 'http://localhost:8080',
-  waitforTimeout: 10000,            // Default timeout for all waitFor* commands.
-  connectionRetryTimeout: 10000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
-  connectionRetryCount: 3,          // Default request retries count
+  waitforTimeout: 20000,            // Default timeout for all waitFor* commands.
+  connectionRetryTimeout: 20000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
+  connectionRetryCount: 2,          // Default request retries count
 
   services: ['selenium-standalone'],
 
   framework: 'cucumber',
-  reporters: ['spec', 'junit', 'allure', 'json'],
+  reporters: ['spec', 'allure', 'json'],
 
   reporterOptions: {
-    junit: { outputDir: './test/reports/junit-results/' },
     json: { outputDir: './test/reports/json-results/' },
     allure: {
       outputDir: './test/reports/allure-results/',
@@ -64,7 +63,7 @@ exports.config = {
   },
 
   cucumberOpts: {
-    require: ['./test/stepDefinitions/*'],   // <string[]> (file/dir) require files before executing features
+    require: ['./test/stepDefinitions/**/*.js'],   // <string[]> (file/dir) require files before executing features
     backtrace: true,    // <boolean> show full backtrace for errors
     compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
     failAmbiguousDefinitions: true,       // <boolean< Treat ambiguous definitions as errors
