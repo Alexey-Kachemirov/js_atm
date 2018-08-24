@@ -11,7 +11,6 @@ module.exports = function (grunt) {
       allureResults: ['./test/reports/allure-results/*'],
       errorShots: ['./test/reports/errorShots/*'],
       jsonResults: ['./test/reports/json-results/*'],
-      junitResults: ['./test/reports/junit-results/*'],
     },
   });
 
@@ -22,7 +21,6 @@ module.exports = function (grunt) {
     'clean:allureResults',
     'clean:errorShots',
     'clean:jsonResults',
-    'clean:junitResults',
     'webdriver:tests',
   ]);
 };
