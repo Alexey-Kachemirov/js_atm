@@ -1,6 +1,6 @@
 /* global browser,expect,assert */
 const Page = require('./page');
-const buttonByText = require('../pageObjects/buttonByText').default;
+const buttonByText = require('./controls/buttonByText').default;
 
 const selectors = {
   headerText: './/h1[contains(@class, "header_root") and text() ="New Attribute"]',
