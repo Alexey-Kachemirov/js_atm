@@ -1,13 +1,5 @@
 Feature:  Text attribute - Create, Delete
 
-# Scenario: 01 User logins to the system
-#   Given I login to "Elateral SSO" account via saml-idp with the following credentials
-#     | user      | BrandgilityAuto+Admin01@gmail.com |
-#     | firstName | QAAuto_FirstName_Admin01          |
-#     | lastName  | QAAuto_SecondName_Admin01         |
-#     | role      | ADMIN                             |
-  #   Then I expect to be on [Home] page
-
   Scenario: 01 User logins to the system
     Given I login to Portal
     Then I expect to be on [Home] page
