@@ -7,8 +7,7 @@
     "node-inspector": "node-inspector --debug-port 5859 --no-preload",
     "selenium-postinstall": "node node_modules/.bin/selenium-standalone install",
     "selenium-start": "node_modules/.bin/selenium-standalone start",
-    "test": "node node_modules/webdriverio/bin/wdio ./test/config/suite.cucumber.conf.js",
-    "test-mobile": "node node_modules/webdriverio/bin/wdio ./test/config/suite.appium.conf.js",
+    "test": "node node_modules/webdriverio/bin/wdio ./wdio.cucumber.conf.js",
     "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results -c && allure open",
     "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
   },
@@ -22,7 +21,7 @@
     "webdriver",
     "automation"
   ],
-  "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
+  "author": "Alexey Kachemirov <alexey_kachemirov@epam.com>",
   "license": "ISC",
   "dependencies": {
     "allure-commandline": "^2.5.0",
@@ -51,12 +50,14 @@
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^3.16.1",
     "eslint-plugin-standard": "^3.0.1",
     "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^1.1.0",
     "grunt-cucumberjs": "^0.8.7",
     "node-uuid": "^1.4.7",
     "selenium-standalone": "^6.8.0",
@@ -70,7 +71,14 @@
   },
   "babel": {
     "presets": [
-        ["env", { "targets": {"node": "current"}}]
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
       ]
+    ]
   }
 }
