@@ -19,5 +19,6 @@ defineSupportCode(({ Given, Then, When }) => {
     const value = text.includes('{uid}') ? generateUniqText(text) : text;
     textInput.getInputTextByLabel(label).waitForVisible();
     textInput.getInputTextByLabel(label).setValue(value);
+    browser.pause(1000);
   });
 });
