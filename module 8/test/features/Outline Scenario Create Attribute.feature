@@ -11,43 +11,43 @@ Feature:  Text attribute - Create, Delete (using Scenrio Outline)
     Then I expect to be on [New Attribute] page
 
   Scenario Outline: 03 User fills in Name field and checks Create button status
-    When I enter <nameInput> value to "Name *" input
+    When I enter "<nameInput>" value to "Name *" input
     Then I expect "Create" button is disabled
     Examples:
-      | nameInput                                              |
-      | "Create button is disabled"                            |
-      | "And now it's still disabled"                          |
-      | "It doesn't matter what to enter. It will be disabled" |
-      | "!OK. I give up"                                       |
+      | nameInput                                            |
+      | Create button is disabled                            |
+      | And now it's still disabled                          |
+      | It doesn't matter what to enter. It will be disabled |
+      | !OK. I give up                                       |
 
   Scenario Outline: 04 User fills in 'Description' field
-    When I enter <descriptionInput> value to "Description" input
+    When I enter "<descriptionInput>" value to "Description" input
     Then I expect "Description Outline Test" value is shown in "Description" input
     Examples:
-      | descriptionInput           |
-      | "Description Outline Test" |
+      | descriptionInput         |
+      | Description Outline Test |
 
   Scenario: 05 User selects 'Text' value from [Attribute type] dropdown
     When I select "Text" value in "Attribute Type *" dropdown
     Then I expect "Text" value is selected in "Attribute Type *" dropdown
 
   Scenario Outline: 06 User selects different attribute types and checks Create button status
-    When I select <attrType> value in "Attribute Type *" dropdown
+    When I select "<attrType>" value in "Attribute Type *" dropdown
     Then I expect "Create" button is disabled
     Examples:
-      | attrType  |
-      | "Number"  |
-      | "List"    |
-      | "Date"    |
-      | "Country" |
-      | "Text"    |
+      | attrType |
+      | Number   |
+      | List     |
+      | Date     |
+      | Country  |
+      | Text     |
 
   Scenario Outline: 07 User checks 'Keyword Search' check box
-    When I check <keyword> checkbox
+    When I check "<keyword>" checkbox
     Then I expect "Keyword Search" checkbox to be checked
     Examples:
-      | keyword          |
-      | "Keyword Search" |
+      | keyword        |
+      | Keyword Search |
 
   Scenario: 08 User creates new attribute
     When I enter "!OK. I give up" value to "Name *" input
