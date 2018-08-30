@@ -6,4 +6,5 @@ test/reports/allure-results/
 test/reports/errorShots/
 test/reports/json-results/
 test/reports/junit-results/
-test/pageobjects/creds.js
+creds.js
+README.md
