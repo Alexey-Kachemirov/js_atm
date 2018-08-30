@@ -27,28 +27,37 @@ Feature:  Text attribute - Create, Delete (using Scenrio Outline)
       | descriptionInput           |
       | "Description Outline Test" |
 
-  Scenario Outline: 05 User selects 'Text' value from [Attribute type] dropdown
-    When I select <attrType> value in "Attribute Type *" dropdown
+  Scenario: 05 User selects 'Text' value from [Attribute type] dropdown
+    When I select "Text" value in "Attribute Type *" dropdown
     Then I expect "Text" value is selected in "Attribute Type *" dropdown
-    Examples:
-      | attrType |
-      | "Text"   |
 
-  Scenario Outline: 06 User checks 'Keyword Search' check box
+  Scenario Outline: 06 User selects different attribute types and checks Create button status
+    When I select <attrType> value in "Attribute Type *" dropdown
+    Then I expect "Create" button is disabled
+    Examples:
+      | attrType  |
+      | "Number"  |
+      | "List"    |
+      | "Date"    |
+      | "Country" |
+      | "Text"    |
+
+  Scenario Outline: 07 User checks 'Keyword Search' check box
     When I check <keyword> checkbox
     Then I expect "Keyword Search" checkbox to be checked
     Examples:
       | keyword          |
       | "Keyword Search" |
 
-  Scenario: 07 User creates new attribute
+  Scenario: 08 User creates new attribute
+    When I enter "!OK. I give up" value to "Name *" input
     Then I expect "Create" button is enabled
     And I click "Create" button
     Then I expect to be on [Manage Attributes] page
     And I expect "!OK. I give up" attribute is shown on [Manage Attributes] page
     When I wait "success" notification is not displayed
 
-  Scenario: 08 User deletes an attribute
+  Scenario: 09 User deletes an attribute
     When I click "bin" icon for "!OK. I give up" attribute on [Manage Attributes] page
     And I click "Yes" button
     Then I expect to be on [Manage Attributes] page
