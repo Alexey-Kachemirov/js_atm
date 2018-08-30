@@ -15,7 +15,7 @@ defineSupportCode(({ Given, Then, When }) => {
     expect(expectedText).is.equal(plainText(actualText));
   });
 
-  When(/^I enter "(.*)" value to "(.*)" input$/, (text, label) => {
+  When(/^I enter \"([^\"]*)\" value to "(.*)" input$/, (text, label) => {
     const value = text.includes('{uid}') ? generateUniqText(text) : text;
     textInput.getInputTextByLabel(label).waitForVisible();
     textInput.getInputTextByLabel(label).setValue(value);

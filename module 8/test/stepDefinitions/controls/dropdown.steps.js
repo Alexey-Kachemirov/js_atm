@@ -11,7 +11,7 @@ defineSupportCode(({ Given, Then, When }) => {
     }, config.waitforTimeout, `Exp: ${expected}\nAct:${dropdown.getSelectedValue(label)}`);
   });
 
-  When(/^I select "(.*)" value in "(.*)" dropdown$/, (value, label) => {
+  When(/^I select \"([^\"]*)\" value in "(.*)" dropdown$/, (value, label) => {
     dropdown.selectValueFromDropdown(label, value);
   });
 });

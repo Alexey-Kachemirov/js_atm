@@ -4,7 +4,7 @@ import { customCheckBox } from '../../pageObjects/controls/customCheckBox';
 import { checkStatus } from '../../support/checkStatus';
 
 defineSupportCode(({ Given, Then, When }) => {
-  When(/^I (check|uncheck) "(.*)" checkbox$/, (action, label) => {
+  When(/^I (check|uncheck) \"([^\"]*)\" checkbox$/, (action, label) => {
     customCheckBox.toggleCheckboxByLabel(action, label);
   });
 
