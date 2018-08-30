@@ -13,6 +13,5 @@ defineSupportCode(({ Given, Then, When }) => {
 
   When(/^I select "(.*)" value in "(.*)" dropdown$/, (value, label) => {
     dropdown.selectValueFromDropdown(label, value);
-    browser.pause(1000);
   });
 });
