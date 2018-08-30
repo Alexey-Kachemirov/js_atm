@@ -1,7 +1,7 @@
 /* global browser,expect,assert */
 import { defineSupportCode } from 'cucumber';
 import loginPage from '../pageobjects/login.page';
-const creds = require('../pageobjects/creds');
+const creds = require('../../creds');
 
 defineSupportCode(({ Given, Then, When }) => {
   Given(/^I login to Portal$/, () => {
