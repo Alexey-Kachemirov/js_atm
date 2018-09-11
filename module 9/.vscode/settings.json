@@ -1,8 +1,0 @@
-{
-  "cucumberautocomplete.steps": [
-    "test/stepDefinitions/**/*.js"
-  ],
-  "cSpell.words": [
-    "get"
-  ]
-}
