@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+node_modules/
+npm-debug.log
+errorShots/
+test/logs/
+allure-report/
+test/reports/allure-results/
+test/reports/json-results/
+creds.js

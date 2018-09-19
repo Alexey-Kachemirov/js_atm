@@ -1,0 +1,85 @@
+{
+  "name": "webdriverIO-with-cucumberBDD",
+  "version": "1.1.5",
+  "description": "WebDriver bindings for Node.js with Cucumber",
+  "scripts": {
+    "selenium-postinstall": "node node_modules/.bin/selenium-standalone install",
+    "selenium-start": "node_modules/.bin/selenium-standalone start",
+    "test": "node node_modules/webdriverio/bin/wdio ./wdio.cucumber.conf.js",
+    "pree2e": "del /f combined.log, error.log",
+    "e2e:generate-report": "node reporter.js",
+    "allure-report": "node_modules/.bin/allure generate ./test/reports/allure-results -c && allure open"
+  },
+  "keywords": [
+    "selenium",
+    "web",
+    "testing",
+    "webdriver",
+    "automation"
+  ],
+  "author": "Alexey Kachemirov <alexey_kachemirov@epam.com>",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.5.0",
+    "assert": "^1.4.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^3.2.1",
+    "cucumber-html-reporter": "^3.0.4",
+    "graceful-fs": "^4.1.4",
+    "grunt": "^0.4.5",
+    "grunt-continue": "^0.1.0",
+    "grunt-webdriver": "^1.0.0",
+    "lodash": "^4.17.4",
+    "node-excel-to-json": "0.0.3",
+    "node-inspector": "^1.1.1",
+    "protractor": "^5.4.0",
+    "protractor-cucumber-framework": "^4.1.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "underscore": "^1.8.3",
+    "wdio-allure-reporter": "^0.6.0",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-html-reporter": "^1.0.2",
+    "wdio-json-reporter": "^0.1.1",
+    "wdio-spec-reporter": "^0.1.2",
+    "webdriverio": "^4.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^3.16.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-cucumberjs": "^0.8.7",
+    "grunt-exec": "^3.0.0",
+    "log4js": "^2.5.3",
+    "node-uuid": "^1.4.7",
+    "selenium-standalone": "^6.8.0",
+    "wdio-browserstack-service": "^0.1.4",
+    "wdio-cucumber-framework": "^1.0.2",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-sauce-service": "^0.4.10",
+    "wdio-screenshot": "^0.5.0",
+    "wdio-selenium-standalone-service": "^0.0.10"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
